@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pawvia 🐾</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating background pets -->
+    <div class="floating-pet pet1">🐶</div>
+    <div class="floating-pet pet2">🐱</div>
+    <div class="floating-pet pet3">🐰</div>
+    <div class="floating-pet pet4">🐾</div>
+    <div class="floating-pet pet5">🦜</div>
+    <div class="floating-pet pet6">🐹</div>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-paw">
+                🐾
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    Pawvia
+                </div>
+
+                <div class="brand-tagline">
+                    Every animal deserves care ❤️
+                </div>
+            </div>
+
+        </div>
+
+
+        <button
+            class="nav-login"
+            onclick="openLogin()"
+        >
+            👤 Login
+        </button>
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-badge">
+                🐾 Welcome to Pawvia
+            </div>
+
+
+            <h1>
+                Be the reason<br>
+                <span>an animal gets help. 🐶</span>
+            </h1>
+
+
+            <p>
+                See an animal that needs help?
+                Find a nearby vet or pet store?
+                Pawvia makes it simple to take action.
+            </p>
+
+
+            <button
+                class="hero-button"
+                onclick="openReport()"
+            >
+                🚨 Help an Animal
+            </button>
+
+        </div>
+
+
+        <!-- Animated pets -->
+
+        <div class="hero-pets">
+
+            <div class="pet-bubble bubble1">
+                🐶
+            </div>
+
+            <div class="pet-bubble bubble2">
+                🐱
+            </div>
+
+            <div class="pet-bubble bubble3">
+                🐰
+            </div>
+
+            <div class="heart heart1">
+                ❤️
+            </div>
+
+            <div class="heart heart2">
+                💕
+            </div>
+
+            <div class="main-pet">
+                🐕
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ACTIONS -->
+
+    <main class="main-content">
+
+
+        <div class="section-heading">
+
+            <span>
+                🐾 WHAT DO YOU NEED?
+            </span>
+
+            <h2>
+                Choose how you want to help
+            </h2>
+
+            <p>
+                One click can make a difference.
+            </p>
+
+        </div>
+
+
+
+        <div class="action-grid">
+
+
+            <!-- REPORT -->
+
+            <button
+                class="action-card report-card"
+                onclick="openReport()"
+            >
+
+                <div class="card-glow"></div>
+
+
+                <div class="action-icon">
+                    🚨
+                </div>
+
+
+                <div class="action-emoji">
+                    🐕
+                </div>
+
+
+                <h3>
+                    Report an Animal
+                </h3>
+
+
+                <p>
+                    Injured? Abandoned?
+                    Found an animal that needs help?
+                    Tell us.
+                </p>
+
+
+                <span class="card-button">
+                    Report Now →
+                </span>
+
+            </button>
+
+
+
+            <!-- HOSPITAL -->
+
+            <button
+                class="action-card hospital-card"
+                onclick="openServices()"
+            >
+
+                <div class="card-glow"></div>
+
+
+                <div class="action-icon">
+                    🏥
+                </div>
+
+
+                <div class="action-emoji">
+                    🐱
+                </div>
+
+
+                <h3>
+                    Hospital & Pet Store
+                </h3>
+
+
+                <p>
+                    Find animal hospitals,
+                    vets and pet stores near you.
+                </p>
+
+
+                <span class="card-button">
+                    Find Near Me →
+                </span>
+
+            </button>
+
+
+
+            <!-- LOGIN -->
+
+            <button
+                class="action-card login-card"
+                onclick="openLogin()"
+            >
+
+                <div class="card-glow"></div>
+
+
+                <div class="action-icon">
+                    👤
+                </div>
+
+
+                <div class="action-emoji">
+                    🐰
+                </div>
+
+
+                <h3>
+                    Login / Sign Up
+                </h3>
+
+
+                <p>
+                    Create your Pawvia account
+                    and keep everything in one place.
+                </p>
+
+
+                <span class="card-button">
+                    Get Started →
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ANIMAL CARE SECTION -->
+
+    <section class="care-section">
+
+
+        <div class="care-text">
+
+            <span>
+                ❤️ WHY PAWVIA?
+            </span>
+
+            <h2>
+                Every paw deserves<br>
+                a helping hand.
+            </h2>
+
+            <p>
+                Whether it's a street dog that needs
+                immediate help or your own pet that
+                needs veterinary care, Pawvia brings
+                people and animal services together.
+            </p>
+
+        </div>
+
+
+        <div class="animal-family">
+
+            <div class="animal animal1">
+                🐶
+            </div>
+
+            <div class="animal animal2">
+                🐱
+            </div>
+
+            <div class="animal animal3">
+                🐰
+            </div>
+
+            <div class="animal animal4">
+                🐹
+            </div>
+
+            <div class="animal animal5">
+                🦜
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="how-section">
+
+
+        <div class="section-heading">
+
+            <span>
+                🐾 HOW IT WORKS
+            </span>
+
+            <h2>
+                Three simple steps
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-circle">
+                    👀
+                </div>
+
+                <h3>
+                    Spot
+                </h3>
+
+                <p>
+                    See an animal that needs help?
+                </p>
+
+            </div>
+
+
+            <div class="step-arrow">
+                ➜
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-circle">
+                    📱
+                </div>
+
+                <h3>
+                    Report
+                </h3>
+
+                <p>
+                    Share the situation and location.
+                </p>
+
+            </div>
+
+
+            <div class="step-arrow">
+                ➜
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-circle">
+                    ❤️
+                </div>
+
+                <h3>
+                    Help
+                </h3>
+
+                <p>
+                    Connect the animal with people
+                    who can help.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-pets">
+            🐶 🐱 🐰 🐹 🦜
+        </div>
+
+        <div class="footer-logo">
+            🐾 Pawvia
+        </div>
+
+        <p>
+            Every animal deserves care. ❤️
+        </p>
+
+        <span>
+            © 2026 Pawvia
+        </span>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1224 @@
+/* ========================================
+   BASIC
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #25332b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff9f3 0%,
+            #f2fbf5 45%,
+            #f8f3ff 100%
+        );
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   FLOATING PETS
+======================================== */
+
+.floating-pet {
+    position: fixed;
+
+    font-size: 30px;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: 0.15;
+
+    user-select: none;
+
+    animation:
+        floatPet 7s ease-in-out infinite;
+}
+
+.pet1 {
+    top: 18%;
+    left: 3%;
+}
+
+.pet2 {
+    top: 38%;
+    right: 3%;
+
+    animation-delay: 1s;
+}
+
+.pet3 {
+    bottom: 20%;
+    left: 5%;
+
+    animation-delay: 2s;
+}
+
+.pet4 {
+    top: 12%;
+    right: 20%;
+
+    animation-delay: 3s;
+}
+
+.pet5 {
+    bottom: 10%;
+    right: 8%;
+
+    animation-delay: 4s;
+}
+
+.pet6 {
+    top: 65%;
+    left: 15%;
+
+    animation-delay: 5s;
+}
+
+@keyframes floatPet {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            rotate(8deg);
+    }
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+
+    width: 100%;
+
+    padding: 20px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: rgba(255,255,255,0.88);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid rgba(0,0,0,0.05);
+
+    position: relative;
+
+    z-index: 20;
+}
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.brand-paw {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0dc,
+            #ffe5ed
+        );
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.05);
+}
+
+.brand-name {
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    color: #26352c;
+}
+
+.brand-tagline {
+
+    font-size: 11px;
+
+    color: #7a867e;
+
+    margin-top: 3px;
+}
+
+.nav-login {
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #26352c;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.nav-login:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+
+    width: 88%;
+
+    max-width: 1200px;
+
+    min-height: 450px;
+
+    margin: 40px auto;
+
+    padding: 60px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff0d9,
+            #ffeef2 45%,
+            #eeeaff
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 50px rgba(80,60,80,0.08);
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.45);
+
+    right: 15%;
+
+    top: -120px;
+}
+
+.hero-content {
+
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+.small-badge {
+
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    background: rgba(255,255,255,0.75);
+
+    border-radius: 50px;
+
+    font-size: 13px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.04);
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(42px, 6vw, 70px);
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+
+    color: #d36c78;
+}
+
+.hero p {
+
+    color: #657169;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+
+    max-width: 600px;
+
+    margin-bottom: 28px;
+}
+
+.hero-button {
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #ff6f61;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(255,111,97,0.25);
+
+    transition: 0.25s;
+}
+
+.hero-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.02);
+
+    box-shadow:
+        0 13px 25px rgba(255,111,97,0.3);
+}
+
+
+/* ========================================
+   HERO PETS
+======================================== */
+
+.hero-pets {
+
+    width: 400px;
+
+    height: 350px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.main-pet {
+
+    position: absolute;
+
+    font-size: 170px;
+
+    right: 70px;
+
+    bottom: 30px;
+
+    animation:
+        petBounce 2.8s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 15px 10px rgba(0,0,0,0.1)
+        );
+}
+
+@keyframes petBounce {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotate(4deg);
+    }
+}
+
+.pet-bubble {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 38px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+    animation:
+        bubbleFloat 3s ease-in-out infinite;
+}
+
+.bubble1 {
+
+    top: 15px;
+    right: 40px;
+}
+
+.bubble2 {
+
+    top: 90px;
+    left: 20px;
+
+    animation-delay: 0.8s;
+}
+
+.bubble3 {
+
+    bottom: 30px;
+    left: 10px;
+
+    animation-delay: 1.4s;
+}
+
+@keyframes bubbleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.heart {
+
+    position: absolute;
+
+    font-size: 22px;
+
+    animation:
+        heartFloat 2.5s ease-in-out infinite;
+}
+
+.heart1 {
+
+    right: 10px;
+    top: 120px;
+}
+
+.heart2 {
+
+    left: 110px;
+    bottom: 10px;
+
+    animation-delay: 1s;
+}
+
+@keyframes heartFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            scale(1.15);
+    }
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+.main-content {
+
+    width: 88%;
+
+    max-width: 1200px;
+
+    margin: 80px auto;
+}
+
+.section-heading {
+
+    margin-bottom: 30px;
+}
+
+.section-heading span {
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #8b766e;
+}
+
+.section-heading h2 {
+
+    font-size: 34px;
+
+    margin-top: 8px;
+}
+
+.section-heading p {
+
+    color: #77827b;
+
+    margin-top: 8px;
+}
+
+
+/* ========================================
+   ACTION CARDS
+======================================== */
+
+.action-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.action-card {
+
+    border: none;
+
+    min-height: 360px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    border-radius: 25px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    color: #25332b;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.07);
+
+    transition:
+        transform 0.35s,
+        box-shadow 0.35s;
+}
+
+.action-card:hover {
+
+    transform:
+        translateY(-12px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.12);
+}
+
+.action-card:active {
+
+    transform:
+        scale(0.97);
+}
+
+.report-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff1ec,
+            #fffaf8
+        );
+}
+
+.hospital-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #eaf4ff,
+            #f9fcff
+        );
+}
+
+.login-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f1eaff,
+            #fbf9ff
+        );
+}
+
+.action-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 36px;
+
+    background: rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,0.06);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.action-emoji {
+
+    position: absolute;
+
+    right: 22px;
+
+    top: 25px;
+
+    font-size: 75px;
+
+    opacity: 0.85;
+
+    transform: rotate(8deg);
+
+    transition: 0.35s;
+}
+
+.action-card:hover .action-emoji {
+
+    transform:
+        rotate(-8deg)
+        scale(1.15);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.action-card h3 {
+
+    margin-top: 50px;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.action-card p {
+
+    color: #6c7770;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    max-width: 290px;
+}
+
+.card-button {
+
+    display: inline-block;
+
+    margin-top: 22px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.card-glow {
+
+    position: absolute;
+
+    width: 170px;
+
+    height: 170px;
+
+    border-radius: 50%;
+
+    right: -70px;
+
+    bottom: -70px;
+
+    background: rgba(255,255,255,0.7);
+
+    transition: 0.4s;
+}
+
+.action-card:hover .card-glow {
+
+    transform: scale(1.7);
+}
+
+
+/* ========================================
+   CARE SECTION
+======================================== */
+
+.care-section {
+
+    width: 100%;
+
+    padding: 75px 7%;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.care-text {
+
+    max-width: 550px;
+}
+
+.care-text > span {
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #cf7180;
+}
+
+.care-text h2 {
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    margin: 12px 0 18px;
+}
+
+.care-text p {
+
+    color: #707b74;
+
+    line-height: 1.7;
+}
+
+.animal-family {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 10px;
+
+    font-size: 75px;
+
+    min-width: 400px;
+}
+
+.animal {
+
+    display: inline-block;
+
+    animation:
+        littleBounce 2.5s ease-in-out infinite;
+}
+
+.animal2 {
+    animation-delay: .2s;
+}
+
+.animal3 {
+    animation-delay: .4s;
+}
+
+.animal4 {
+    animation-delay: .6s;
+}
+
+.animal5 {
+    animation-delay: .8s;
+}
+
+@keyframes littleBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-13px);
+    }
+}
+
+
+/* ========================================
+   HOW IT WORKS
+======================================== */
+
+.how-section {
+
+    padding: 75px 7%;
+
+    text-align: center;
+}
+
+.how-section .section-heading {
+
+    margin-bottom: 45px;
+}
+
+.steps {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.step {
+
+    flex: 1;
+}
+
+.step-circle {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: auto auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 35px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+}
+
+.step h3 {
+
+    margin-bottom: 7px;
+}
+
+.step p {
+
+    color: #758078;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.step-arrow {
+
+    font-size: 28px;
+
+    color: #b4beb7;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background: #25332b;
+
+    color: white;
+}
+
+.footer-pets {
+
+    font-size: 30px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+footer p {
+
+    color: #c2cbc5;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+footer span {
+
+    color: #8e9a92;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        padding: 16px 5%;
+    }
+
+    .nav-login {
+
+        padding: 10px 14px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+
+        width: 92%;
+
+        min-height: 550px;
+
+        padding: 35px 25px;
+
+        margin-top: 25px;
+
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+
+        font-size: 15px;
+    }
+
+    .hero-pets {
+
+        position: absolute;
+
+        width: 100%;
+
+        height: 220px;
+
+        bottom: 0;
+
+        left: 0;
+    }
+
+    .main-pet {
+
+        font-size: 115px;
+
+        right: 30%;
+
+        bottom: 5px;
+    }
+
+    .pet-bubble {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 30px;
+    }
+
+    .bubble1 {
+        right: 12%;
+        top: 10px;
+    }
+
+    .bubble2 {
+        left: 10%;
+        top: 50px;
+    }
+
+    .bubble3 {
+        left: 25%;
+        bottom: 10px;
+    }
+
+    .heart1 {
+        right: 7%;
+        top: 90px;
+    }
+
+    .heart2 {
+        left: 15%;
+        bottom: 20px;
+    }
+
+    .main-content {
+
+        width: 90%;
+
+        margin: 55px auto;
+    }
+
+    .section-heading h2 {
+
+        font-size: 27px;
+    }
+
+    .action-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .action-card {
+
+        min-height: 290px;
+
+        padding: 25px;
+    }
+
+    .action-card h3 {
+
+        margin-top: 35px;
+    }
+
+    .care-section {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 60px 7%;
+    }
+
+    .care-text h2 {
+
+        font-size: 35px;
+    }
+
+    .animal-family {
+
+        min-width: 0;
+
+        width: 100%;
+
+        justify-content: center;
+
+        font-size: 52px;
+
+        gap: 5px;
+    }
+
+    .steps {
+
+        flex-direction: column;
+
+        gap: 22px;
+    }
+
+    .step-arrow {
+
+        transform: rotate(90deg);
+    }
+
+    .floating-pet {
+
+        display: none;
+    }
+}
+
+
+/* ========================================
+   SMALL PHONE
+======================================== */
+
+@media (max-width: 420px) {
+
+    .brand-paw {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 23px;
+    }
+
+    .brand-name {
+
+        font-size: 20px;
+    }
+
+    .brand-tagline {
+
+        font-size: 9px;
+    }
+
+    .hero {
+
+        min-height: 540px;
+    }
+
+    .hero h1 {
+
+        font-size: 38px;
+    }
+
+    .hero-button {
+
+        width: 100%;
+    }
+
+    .animal-family {
+
+        font-size: 42px;
+    }
+
+}
